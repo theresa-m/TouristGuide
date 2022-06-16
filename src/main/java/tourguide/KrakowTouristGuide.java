@@ -2,9 +2,16 @@ package tourguide;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 /* Attraction name, description, distance from Devoxx Poland 2022 */
-record Attraction(String name, String description, double distanceKms) { }
+record Attraction(String name, String description, double distanceKms) {
+    public String toString() {
+        return name + "\n"
+                + distanceKms + " kms from Devoxx Poland 2022" + "\n"
+                + description;
+    }
+}
 
 public class KrakowTouristGuide {
     static List<Attraction> cityAttractions = new LinkedList<>();
@@ -17,8 +24,11 @@ public class KrakowTouristGuide {
                 "Ferris wheel with a view",
                 0.35));
 
-        while(true) {
+        Random r = new Random();
 
-        }
+        System.out.println("What should you see while in Kraków, Poland?\n");
+
+        int i = r.nextInt(cityAttractions.size() + 1);
+        System.out.println(cityAttractions.get(i).toString());
     }
 }
