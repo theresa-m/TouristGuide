@@ -4,16 +4,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-/* Attraction name, description, distance from Devoxx Poland 2022 */
-record Attraction(String name, String description, double distanceKms) {
-    public String toString() {
-        return name + "\n"
-                + distanceKms + " kms from Devoxx Poland 2022" + "\n"
-                + description;
-    }
-}
-
 public class KrakowTouristGuide {
+    /* Attraction name, description, distance from Devoxx Poland 2022 */
+    record Attraction(String name, String description, double distanceKms) {
+        public String toString() {
+            return name + "\n"
+                    + distanceKms + " kms from Devoxx Poland 2022" + "\n"
+                    + description;
+        }
+    }
+
     static List<Attraction> cityAttractions = new LinkedList<>();
 
     public static void main(String[] args) {
