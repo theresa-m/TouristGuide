@@ -7,7 +7,7 @@ import java.util.List;
 record Attraction(String name, String description, double distanceKms) { }
 
 public class KrakowTouristGuide {
-    static List<Attraction> cityAttractions = new LinkedList<Attraction>();
+    static List<Attraction> cityAttractions = new LinkedList<>();
 
     public static void main(String[] args) {
         cityAttractions.add(new Attraction("National Museum",
