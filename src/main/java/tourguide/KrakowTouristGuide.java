@@ -1,5 +1,7 @@
 package tourguide;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -15,6 +17,7 @@ public class KrakowTouristGuide {
     }
 
     static List<Attraction> cityAttractions = new LinkedList<>();
+    static Logger log = LogManager.getLogger(KrakowTouristGuide.class.getName());
 
     public static void main(String[] args) {
         cityAttractions.add(new Attraction("National Museum",
