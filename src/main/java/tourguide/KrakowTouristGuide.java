@@ -69,5 +69,23 @@ public class KrakowTouristGuide {
 
     private static void printIntro() {
         System.out.println("What should you see while in Kraków, Poland?");
+
+        System.out.println(" ____  __.              __              ___________                     ________      .__    .___      ");
+        System.out.println("|    |/ _|___________  |  | ____  _  __ \\__    ___/___  __ _________   /  _____/ __ __|__| __| _/____  ");
+        System.out.println("|      < \\_  __ \\__  \\ |  |/ /\\ \\/ \\/ /   |    | /  _ \\|  |  \\_  __ \\ /   \\  ___|  |  \\  |/ __ |/ __ \\ ");
+        System.out.println("|    |  \\ |  | \\// __ \\|    <  \\     /    |    |(  <_> )  |  /|  | \\/ \\    \\_\\  \\  |  /  / /_/ \\  ___/ ");
+        System.out.println("|____|__ \\|__|  (____  /__|_ \\  \\/\\_/     |____| \\____/|____/ |__|     \\______  /____/|__\\____ |\\___  >");
+        System.out.println("        \\/           \\/     \\/                                                \\/              \\/    \\/ ");
+
+        System.out.println("\t\t                                    +              #####");
+        System.out.println("\t\t                                   / \\");
+        System.out.println("\t\t _____        _____     __________/ o \\/\\_________      _________");
+        System.out.println("\t\t|o o o|_______|    |___|               | | # # #  |____|o o o o  | /\\");
+        System.out.println("\t\t|o o o|  * * *|: ::|. .|               |o| # # #  |. . |o o o o  |//\\\\");
+        System.out.println("\t\t|o o o|* * *  |::  |. .| []  []  []  []|o| # # #  |. . |o o o o  |((|))");
+        System.out.println("\t\t|o o o|**  ** |:  :|. .| []  []  []    |o| # # #  |. . |o o o o  |((|))");
+        System.out.println("\t\t|_[]__|__[]___|_||_|__<|____________;;_|_|___/\\___|_.|_|____[]___|  |");
+
+        System.out.println("\n\nPress enter to find out what you should see while visiting the city!\n");
     }
 }
