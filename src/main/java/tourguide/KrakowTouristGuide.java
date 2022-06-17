@@ -28,20 +28,24 @@ public class KrakowTouristGuide {
     }
 
     public static void main(String[] args) {
-        cityAttractions.add(new Attraction("Sonatype Booth", "Come learn about Sonatype at Devoxx Poland!", 0.0));
-        cityAttractions.add(new Attraction("National Museum",
-                "3 permanent galleries displaying artworks & historical artifacts from Poland & elsewhere in Europe.",
-                1.9));
-        cityAttractions.add(new Attraction("Kraków Eye",
-                "Ferris wheel with a view",
-                0.35));
+        try {
+            cityAttractions.add(new Attraction("Sonatype Booth", "Come learn about Sonatype at Devoxx Poland!", 0.0));
+            cityAttractions.add(new Attraction("National Museum",
+                    "3 permanent galleries displaying artworks & historical artifacts from Poland & elsewhere in Europe.",
+                    1.9));
+            cityAttractions.add(new Attraction("Kraków Eye",
+                    "Ferris wheel with a view",
+                    0.35));
 
 
-        Random r = new Random();
+            Random r = new Random();
 
-        System.out.println("What should you see while in Kraków, Poland?\n");
+            System.out.println("What should you see while in Kraków, Poland?\n");
 
-        int i = r.nextInt(cityAttractions.size());
-        System.out.println(cityAttractions.get(i).print());
+            int i = r.nextInt(cityAttractions.size());
+            System.out.println(cityAttractions.get(i).print());
+        } catch(Throwable t) {
+            t.printStackTrace(System.err);
+        }
     }
 }
