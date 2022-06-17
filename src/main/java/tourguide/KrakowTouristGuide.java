@@ -45,7 +45,6 @@ public class KrakowTouristGuide {
                 log.info(attraction.name());
                 System.out.println(attraction.print());
             } catch (Throwable t) {
-                log.error(t.getMessage());
                 t.printStackTrace(System.err);
             }
         }
