@@ -10,7 +10,7 @@ import java.util.Random;
 public class KrakowTouristGuide {
     static final Double DEVOXXPOLANDRADIUS = 0.0;
     static final Double WALKRADIUS = 2.5;
-    static List<Attraction> cityAttractions = new LinkedList<>();
+    static List<Attraction> cityAttractions = new ArrayList<>();
     static Logger log = LogManager.getLogger(KrakowTouristGuide.class.getName());
 
     /* Attraction name, description, distance from Devoxx Poland 2022 */
