@@ -1,1 +1,3 @@
 jdkVersion="17"
+tools=[]
+customTools=["/extra-tools/CLOMonitor.sh"]
