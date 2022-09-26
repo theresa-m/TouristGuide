@@ -1,1 +1,3 @@
 jdkVersion="17"
+customTools=["/extra-tools/clomonitor.sh"]
+tools=[]
