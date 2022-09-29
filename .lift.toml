@@ -2,29 +2,52 @@ jdkVersion="17"
 customTools=["/extra-tools/clomonitor.sh"] # enable CLOMonitor scanning
 tools=[] # do not include any other scanning tools
 
+### Uncomment the appropriate set of ignoreRules to enable specific CLOMonitor check sets
+### See https://github.com/cncf/clomonitor/blob/main/docs/checks.md for more details
+
 ### code-lite (subset of code, recommended for secondary code repositories)
+# ignoreRules = [
+# 	"Security: Signed Releases",
+# 	"Security: Security Policy",
+# 	"Security: Sbom",
+# 	"Security: Maintained",
+# 	"Security: Dependency Update Tool",
+# 	"Security: Code Review",
+# 	"Security: Branch Protection",
+# 	"License: License Scanning",
+# 	"Legal: Trademark Disclaimer",
+# 	"Documentation: Website",
+# 	"Documentation: Roadmap",
+# 	"Documentation: Governance",
+# 	"Documentation: Code Of Conduct",
+# 	"Documentation: Changelog",
+# 	"Documentation: Adopters",
+# 	"Best Practices: Slack Presence",
+# 	"Best Practices: Openssf Badge",
+# 	"Best Practices: Github Discussions",
+# 	"Best Practices: Community Meeting",
+# 	"Best Practices: Artifacthub Badge",
+# 	"Best Practices: Analytics"
+# ]
+
+### community (recommended for repositories with community content)
 ignoreRules = [
 	"Security: Signed Releases",
-	"Security: Security Policy",
 	"Security: Sbom",
 	"Security: Maintained",
 	"Security: Dependency Update Tool",
 	"Security: Code Review",
 	"Security: Branch Protection",
+	"License: License Spdx Id",
 	"License: License Scanning",
-	"Legal: Trademark Disclaimer",
-	"Documentation: Website",
-	"Documentation: Roadmap",
-	"Documentation: Governance",
-	"Documentation: Code Of Conduct",
+	"License: License Approved",
+	"Documentation: Maintainers",
 	"Documentation: Changelog",
-	"Documentation: Adopters",
-	"Best Practices: Slack Presence",
+	"Best Practices: Recent Release",
 	"Best Practices: Openssf Badge",
-	"Best Practices: Github Discussions",
-	"Best Practices: Community Meeting",
-	"Best Practices: Artifacthub Badge",
-	"Best Practices: Analytics"
+	"Best Practices: Dco",
+	"Best Practices: Cla",
+	"Best Practices: Artifacthub Badge"
 ]
 
 ### Ignore all tests
