@@ -2,81 +2,150 @@ jdkVersion="17"
 customTools=["/extra-tools/clomonitor.sh"] # enable CLOMonitor scanning
 tools=[] # do not include any other scanning tools
 
+########################################################################################
 ### Uncomment the appropriate set of ignoreRules to enable specific CLOMonitor check sets
-### See https://github.com/cncf/clomonitor/blob/main/docs/checks.md for more details
+### See https://github.com/cncf/clomonitor/blob/main/docs/checks.md for more details.
+### Templates included here:
+### - code
+### - code-lite
+### - community
+### - docs
+### - code+community (a common combination)
+### - all tests (for name references)
+########################################################################################
+
+### code (recommended for projects’ primary code repository)
+# ignoreRules = [
+# "Documentation: Adopters",
+# "Documentation: Code Of Conduct",
+# "Documentation: Governance",
+# "Documentation: Roadmap",
+# "Documentation: Website",
+# "Best Practices: Analytics",
+# "Best Practices: Community Meeting",
+# "Best Practices: Github Discussions",
+# "Best Practices: Slack Presence",
+# "Legal: Trademark Disclaimer"
+# ]
 
 ### code-lite (subset of code, recommended for secondary code repositories)
 # ignoreRules = [
-# 	"Security: Signed Releases",
-# 	"Security: Security Policy",
-# 	"Security: Sbom",
-# 	"Security: Maintained",
-# 	"Security: Dependency Update Tool",
-# 	"Security: Code Review",
-# 	"Security: Branch Protection",
-# 	"License: License Scanning",
-# 	"Legal: Trademark Disclaimer",
-# 	"Documentation: Website",
-# 	"Documentation: Roadmap",
-# 	"Documentation: Governance",
-# 	"Documentation: Code Of Conduct",
-# 	"Documentation: Changelog",
-# 	"Documentation: Adopters",
-# 	"Best Practices: Slack Presence",
-# 	"Best Practices: Openssf Badge",
-# 	"Best Practices: Github Discussions",
-# 	"Best Practices: Community Meeting",
-# 	"Best Practices: Artifacthub Badge",
-# 	"Best Practices: Analytics"
+# "Documentation: Adopters",
+# "Documentation: Changelog",
+# "Documentation: Code Of Conduct",
+# "Documentation: Governance",
+# "Documentation: Roadmap",
+# "Documentation: Website",
+# "License: License Scanning",
+# "Best Practices: Analytics",
+# "Best Practices: Artifacthub Badge",
+# "Best Practices: Community Meeting",
+# "Best Practices: Github Discussions",
+# "Best Practices: Openssf Badge",
+# "Best Practices: Slack Presence",
+# "Security: binary artifacts",
+# "Security: Code Review",
+# "Security: dangerous workflow",
+# "Security: Dependency Update Tool",
+# "Security: Maintained",
+# "Security: Sbom",
+# "Security: Security Policy",
+# "Security: Signed Releases",
+# "Security: token permissions",
+# "Legal: Trademark Disclaimer"
 # ]
 
 ### community (recommended for repositories with community content)
 # ignoreRules = [
-# 	"Security: Signed Releases",
-# 	"Security: Sbom",
-# 	"Security: Maintained",
-# 	"Security: Dependency Update Tool",
-# 	"Security: Code Review",
-# 	"Security: Branch Protection",
-# 	"License: License Spdx Id",
-# 	"License: License Scanning",
-# 	"License: License Approved",
-# 	"Documentation: Maintainers",
-# 	"Documentation: Changelog",
-# 	"Best Practices: Recent Release",
-# 	"Best Practices: Openssf Badge",
-# 	"Best Practices: Dco",
-# 	"Best Practices: Cla",
-# 	"Best Practices: Artifacthub Badge"
+# "Documentation: Changelog",
+# "Documentation: Maintainers",
+# "Documentation: Roadmap",
+# "License: License Spdx Id",
+# "License: License Approved",
+# "License: License Scanning",
+# "Best Practices: Artifacthub Badge",
+# "Best Practices: Cla",
+# "Best Practices: Dco",
+# "Best Practices: Openssf Badge",
+# "Best Practices: Recent Release",
+# "Security: binary artifacts",
+# "Security: Code Review",
+# "Security: dangerous workflow",
+# "Security: Dependency Update Tool",
+# "Security: Maintained",
+# "Security: Sbom",
+# "Security: Signed Releases",
+# "Security: token permissions"
 # ]
 
 ### docs (recommended for other documentation repositories)
+ignoreRules = [
+"Documentation: Adopters",
+"Documentation: Changelog",
+"Documentation: Code Of Conduct",
+"Documentation: Contributing",
+"Documentation: Governance",
+"Documentation: Maintainers",
+"Documentation: Roadmap",
+"Documentation: Website",
+"License: License Scanning",
+"Best Practices: Analytics",
+"Best Practices: Artifacthub Badge",
+"Best Practices: Cla",
+"Best Practices: Community Meeting",
+"Best Practices: Dco",
+"Best Practices: Github Discussions",
+"Best Practices: Openssf Badge",
+"Best Practices: Recent Release",
+"Best Practices: Slack Presence",
+"Security: binary artifacts",
+"Security: Code Review",
+"Security: dangerous workflow",
+"Security: Dependency Update Tool",
+"Security: Maintained",
+"Security: Sbom",
+"Security: Security Policy",
+"Security: Signed Releases",
+"Security: token permissions",
+"Legal: Trademark Disclaimer"
+]
+
+### code+community
 # ignoreRules = [
-# 	"Security: Signed Releases",
-# 	"Security: Security Policy",
-# 	"Security: Sbom",
-# 	"Security: Maintained",
-# 	"Security: Dependency Update Tool",
-# 	"Security: Code Review",
-# 	"Security: Branch Protection",
-# 	"License: License Scanning",
-# 	"Legal: Trademark Disclaimer",
-# 	"Documentation: Website",
-# 	"Documentation: Roadmap",
-# 	"Documentation: Maintainers",
-# 	"Documentation: Governance",
-# 	"Documentation: Contributing",
-# 	"Documentation: Code Of Conduct",
-# 	"Documentation: Changelog",
-# 	"Documentation: Adopters",
-# 	"Best Practices: Slack Presence",
-# 	"Best Practices: Recent Release",
-# 	"Best Practices: Openssf Badge",
-# 	"Best Practices: Github Discussions",
-# 	"Best Practices: Dco",
-# 	"Best Practices: Community Meeting",
-# 	"Best Practices: Cla",
-# 	"Best Practices: Artifacthub Badge",
-# 	"Best Practices: Analytics"
 # ]
 
+### All tests
+### Ignore all tests
+# ignoreRules = [
+# "Documentation: Adopters",
+# "Documentation: Changelog",
+# "Documentation: Code Of Conduct",
+# "Documentation: Contributing",
+# "Documentation: Governance",
+# "Documentation: Maintainers",
+# "Documentation: readme",
+# "Documentation: Roadmap",
+# "Documentation: Website",
+# "License: License Spdx Id",
+# "License: License Approved",
+# "License: License Scanning",
+# "Best Practices: Analytics",
+# "Best Practices: Artifacthub Badge",
+# "Best Practices: Cla",
+# "Best Practices: Community Meeting",
+# "Best Practices: Dco",
+# "Best Practices: Github Discussions",
+# "Best Practices: Openssf Badge",
+# "Best Practices: Recent Release",
+# "Best Practices: Slack Presence",
+# "Security: binary artifacts",
+# "Security: Code Review",
+# "Security: dangerous workflow",
+# "Security: Dependency Update Tool",
+# "Security: Maintained",
+# "Security: Sbom",
+# "Security: Security Policy",
+# "Security: Signed Releases",
+# "Security: token permissions",
+# "Legal: Trademark Disclaimer"
+# ]
