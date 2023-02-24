@@ -40,6 +40,8 @@ public class KrakowTouristGuide {
 		java.sql.Time tdep = new java.sql.Time(0);
                 tdep.getYear();
 
+		int mer = java.math.BigDecimal.ROUND_UP;
+
                 // deprecated for removal
                 //java.io.FileInputStream.finalize();
 
