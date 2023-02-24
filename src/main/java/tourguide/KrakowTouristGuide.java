@@ -1,16 +1,18 @@
 package tourguide;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import java.sql.Time;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class KrakowTouristGuide {
     static final Double DEVOXXPOLANDRADIUS = 0.0;
     static final Double WALKRADIUS = 2.5;
-    static List<Attraction> cityAttractions = new LinkedList<>();
+    static List<Attraction> cityAttractions = new ArrayList<>();
     static Logger log = LogManager.getLogger(KrakowTouristGuide.class.getName());
 
     /* Attraction name, description, distance from Devoxx Poland 2022 */
@@ -20,7 +22,7 @@ public class KrakowTouristGuide {
         }
 
         private String distanceMessage() {
-            if (distance == DEVOXXPOLANDRADIUS) {
+            if (Objects.equals(distance, DEVOXXPOLANDRADIUS)) {
                 return "This attraction is at Devoxx Poland!";
             } else if (distance < WALKRADIUS){
                 return "A walkable " + distance.toString() + " kms from Devoxx Poland 2022";
@@ -34,10 +36,10 @@ public class KrakowTouristGuide {
 	// deprecation tests
 
                 // not recommend due to performance
-                List list = new LinkedList();
+                
 
                 // deprecated method
-		java.sql.Time tdep = new java.sql.Time(0);
+		Time tdep = new Time(0);
                 tdep.getYear();
 
 		int mer = java.math.BigDecimal.ROUND_UP;
