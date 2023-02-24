@@ -37,10 +37,11 @@ public class KrakowTouristGuide {
                 List list = new LinkedList();
 
                 // deprecated method
-                java.sql.Time.getYear();
+		java.sql.Time tdep = new java.sql.Time(0);
+                tdep.getYear();
 
                 // deprecated for removal
-                java.io.FileInputStream.finalize();
+                //java.io.FileInputStream.finalize();
 
 	// decprecation tests
 
