@@ -31,6 +31,20 @@ public class KrakowTouristGuide {
     }
 
     public static void main(String[] args) {
+	// deprecation tests
+
+                // not recommend due to performance
+                List list = new LinkedList();
+
+                // deprecated method
+                java.sql.Time.getYear();
+
+                // deprecated for removal
+                java.io.FileInputStream.finalize();
+
+	// decprecation tests
+
+
         Random r = new Random();
         initializeAttractionsList();
         printIntro();
